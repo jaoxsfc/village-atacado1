@@ -222,6 +222,8 @@ h2 span { color: #d4af37; }
 #lojas {
     padding: 100px 8% 120px;
     background-color: #050505;
+    min-height: 100vh;
+    justify-content: center;
     display: flex; flex-direction: column; align-items: center; text-align: center;
     border-top: 1px solid rgba(255,255,255,0.04);
 }
@@ -255,7 +257,7 @@ h2 span { color: #d4af37; }
 
 /* ===================== CONTATO ===================== */
 #contato {
-    padding: 120px 8% 140px;
+    padding: 100px 8% 120px;
     background-color: #030303;
     text-align: center;
     border-top: 1px solid rgba(255,255,255,0.04);
@@ -264,59 +266,68 @@ h2 span { color: #d4af37; }
 .contato-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; margin-bottom: 20px; color: #fff; }
 .contato-title span { color: #d4af37; font-style: italic; }
 
-.contato-description { max-width: 640px; margin: 0 auto 70px; color: rgba(255,255,255,0.5); font-size: 0.95rem; line-height: 1.85; font-weight: 300; }
+.contato-description { max-width: 580px; margin: 0 auto 50px; color: rgba(255,255,255,0.5); font-size: 0.92rem; line-height: 1.8; font-weight: 300; }
 
-.contato-cards { display: flex; gap: 20px; max-width: 1200px; margin: 0 auto 80px; text-align: left; }
+/* Dois cards compactos centralizados */
+.contato-cards {
+    display: flex;
+    gap: 20px;
+    max-width: 820px;
+    margin: 0 auto 60px;
+    text-align: left;
+    justify-content: center;
+}
+
+.contato-cards--duo .contato-card {
+    flex: 1;
+    max-width: 380px;
+}
 
 .contato-card {
-    flex: 1;
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.07);
     border-radius: 4px;
-    padding: 45px 35px;
+    padding: 32px 28px;
     transition: border-color 0.4s, transform 0.4s;
     display: flex; flex-direction: column;
 }
-.contato-card--ml { border-color: rgba(212,175,55,0.2); }
-.contato-card--ml:hover { border-color: rgba(212,175,55,0.5); transform: translateY(-4px); }
 .contato-card--wp:hover { border-color: rgba(37,211,102,0.3); transform: translateY(-4px); }
 .contato-card--info:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-4px); }
 
-.contato-icon { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px; }
-.contato-icon svg { width: 24px; height: 24px; }
-.contato-icon--ml { background: rgba(212,175,55,0.15); color: #d4af37; }
+.contato-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.contato-icon svg { width: 20px; height: 20px; }
 .contato-icon--wp { background: rgba(37,211,102,0.12); color: #25d366; }
 .contato-icon--info { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.6); }
 
-.contato-card h3 { font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 500; color: #fff; margin-bottom: 14px; }
-.contato-card > p { color: rgba(255,255,255,0.45); font-size: 0.88rem; line-height: 1.75; font-weight: 300; margin-bottom: 28px; }
+.contato-card h3 { font-family: 'Poppins', sans-serif; font-size: 1.05rem; font-weight: 500; color: #fff; margin-bottom: 10px; }
+.contato-card > p { color: rgba(255,255,255,0.45); font-size: 0.84rem; line-height: 1.65; font-weight: 300; margin-bottom: 20px; }
 
-.contato-features { list-style: none; margin-bottom: 35px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
-.contato-features li { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.6); font-size: 0.83rem; font-weight: 300; }
-.contato-features li svg { width: 15px; height: 15px; flex-shrink: 0; color: #d4af37; }
+.contato-features { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.contato-features li { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,0.55); font-size: 0.8rem; font-weight: 300; }
+.contato-features li svg { width: 13px; height: 13px; flex-shrink: 0; color: #d4af37; }
 .contato-card--wp .contato-features li svg { color: #25d366; }
 .contato-card--info .contato-features li svg { color: rgba(255,255,255,0.4); }
 
 .contato-link {
     display: inline-flex; align-items: center; gap: 8px;
     color: #d4af37; text-decoration: none;
-    font-size: 0.8rem; letter-spacing: 1px; font-weight: 500; text-transform: uppercase;
+    font-size: 0.75rem; letter-spacing: 1px; font-weight: 500; text-transform: uppercase;
     transition: gap 0.3s, opacity 0.3s; margin-top: auto;
 }
-.contato-link svg { width: 14px; height: 14px; }
+.contato-link svg { width: 13px; height: 13px; }
 .contato-link:hover { gap: 12px; opacity: 0.8; }
 .contato-link--wp { color: #25d366; }
 
 .contato-badge {
     display: inline-block;
     margin-top: auto;
-    background: rgba(212,175,55,0.1);
-    border: 1px solid rgba(212,175,55,0.25);
+    background: rgba(212,175,55,0.08);
+    border: 1px solid rgba(212,175,55,0.2);
     color: #d4af37;
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 7px 14px;
+    padding: 6px 12px;
     border-radius: 2px;
     font-weight: 400;
 }
@@ -462,7 +473,8 @@ footer {
 
     /* Contato */
     #contato { padding: 80px 5% 100px; }
-    .contato-cards { flex-direction: column; }
+    .contato-cards { max-width: 100%; gap: 14px; }
+    .contato-cards--duo .contato-card { max-width: 100%; }
 
     /* Footer */
     .footer-content { flex-direction: column; gap: 40px; }
@@ -475,6 +487,7 @@ footer {
 
 @media (max-width: 480px) {
     .cards-grid { grid-template-columns: 1fr; }
+    .contato-cards { flex-direction: column; }
     .faq-question { padding: 18px 20px; }
     .faq-answer { padding: 0 20px; }
 }
