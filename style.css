@@ -160,6 +160,7 @@ nav a:hover::after { width: 100%; }
     opacity: 0;
     transform: translateY(14px);
     animation: heroFadeIn 1s ease 1.6s forwards;
+    letter-spacing: 1px;
 }
 
 @keyframes heroFadeIn {
